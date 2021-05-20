@@ -1,0 +1,90 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.btn {
+    min-width: 70px;
+    max-width: 200px;
+    margin: 1em;
+    padding: 1em 2em;
+    border-radius: 5px;
+    border-width: 2px;
+    background-color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+.btn:hover,
+.btn:focus {
+    cursor: pointer;
+}
+
+/* back button */
+.btn-back {
+    color: hotpink;
+    border-color: hotpink;
+}
+.btn-back:hover, .btn-back:focus {
+  animation-name: rightToLeft;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+
+}
+@keyframes rightToLeft {
+  100% {
+    background-color: black;
+    background-position: left;
+  }
+  0% {
+    box-shadow: inset 9rem 0 0 0 hotpink;
+  }
+}
+
+
+/* refresh button */
+.btn-refresh {
+    color: orange;
+    border-color: orange;
+}
+.btn-refresh:hover, .btn-refresh:focus {
+  animation-name: flash;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+@keyframes flash {
+  50% {
+    box-shadow: 7px 7px 12px 3px orange, 7px -7px 12px 3px orange, -7px 7px 12px 3px orange, -7px -7px 12px 3px orange;
+  }
+}
+
+/* back next */
+.btn-next {
+    color: greenyellow;
+    border-color: greenyellow;
+}
+.btn-next:hover, .btn-next:focus {
+  animation-name: leftToRight;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes leftToRight {
+  100% {
+    box-shadow: inset 9rem 0 0 0 greenyellow;
+    color: black;
+  }
+}
